@@ -1,0 +1,7 @@
+* text=auto
+*.m text
+*.md text
+*.ioc text
+*.slx binary
+*.mat binary
+*.xlsx binary
