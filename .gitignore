@@ -1,0 +1,9 @@
+*.asv
+*.slxc
+*.autosave
+*.original
+slprj/
+*_ert_rtw/
+*.bin
+*.elf
+*.hex
