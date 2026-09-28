@@ -83,3 +83,7 @@ Execute os scripts a partir da própria pasta `analise/`, já que os caminhos do
 ## Observação sobre os ensaios com SMC
 
 No ensaio de 06/08, a camada limite foi Φ = 0,01 m/s. Como ε/Φ = 200 s⁻¹ supera o ganho de aproximação total κ_ef = 111,5 s⁻¹, a função `smc_mancal.m` limita κ a zero. Com isso, o controlador operou fora da camada limite na maior parte do ensaio e não chegou ao modo deslizante. Essa situação é discutida no Capítulo 6 da monografia.
+
+## Licença
+
+Distribuído sob a licença MIT. Consulte o arquivo [LICENSE](LICENSE).
