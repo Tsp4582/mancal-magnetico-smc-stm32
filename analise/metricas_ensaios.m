@@ -1,4 +1,4 @@
-% Metricas dos ensaios de bancada usadas no Capitulo 6 da monografia
+% Metricas dos ensaios de bancada
 % (partida, regime, rotacao, orbitas, impulsos e funcao de deslizamento).
 % Executar a partir da pasta analise/.
 %% ---------- PID ----------

@@ -8,7 +8,7 @@ clc
 %     C=97.7  C_I=36.3  G_TOT=111.5  EPS=2  PHI=0.01
 %     B=13.5  RAZAO=790  I_MAX=2.0  EI_MAX=0.01
 %
-%  Gera e SALVA os 9 arquivos com os nomes exatos usados no cap6:
+%  Gera e SALVA os 9 arquivos de figura:
 %     1 - posicao partida SMC.png
 %     2 - posicao rotacao SMC.png
 %     2b - posicao rotacao (zoom) SMC.png
@@ -18,10 +18,6 @@ clc
 %     6 - corrente SMC.png            (impulso)
 %     7 - orbita XY SMC.png
 %     8 - superficie de deslizamento SMC.png
-%
-%  ATENCAO: no cap6 as figuras 4, 5 e 6 tem o MESMO nome de arquivo
-%  ("4 - corrente SMC", "5 - corrente SMC", "6 - corrente SMC"), o que
-%  esta certo porque o numero as distingue. Confira ao subir no Overleaf.
 % =========================================================================
 
 PHI      = 0.01;                  % camada limite do ensaio
@@ -157,7 +153,7 @@ xlabel("Tempo [s]"); ylabel("s  [m/s]");
 legend("s(t)","\pm\Phi",'Location','best'); fontsize(FS,"points");
 grava(f8, SALVAR, PASTA, "8 - superficie de deslizamento SMC.png");
 
-%% ------------------- numeros para o texto do capitulo -------------------
+%% ------------------- metricas do ensaio ---------------------------------
 fprintf('\n===== NUMEROS DO ENSAIO SMC 06/08 =====\n');
 
 m = t >= 15 & t <= 38;

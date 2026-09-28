@@ -179,7 +179,7 @@ fontsize(FS,"points");
 
 sgtitle(sprintf("Órbita do rotor a \\approx%.0f rpm", f_rot*60), 'FontSize', FS);
 
-%% ------------------- numeros para o texto do relatorio ------------------
+%% ------------------- metricas do ensaio ---------------------------------
 m   = t >= jan_impulso(1) & t <= jan_impulso(2);
 tt  = t(m); pp = pos_Ay(m); ii = i_Ay(m);
 [~,k] = max(abs(pp));
