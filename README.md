@@ -11,11 +11,21 @@ O repositório reúne os modelos Simulink, os scripts MATLAB e os dados de ensai
 ## Estrutura
 
 ```
+configuracao/ script de parâmetros usado pela simulação e pelos experimentos
 firmware/     modelos Simulink embarcados e configuração do microcontrolador
-simulacao/    modelo não linear da planta, scripts de configuração e resultados de simulação
+simulacao/    modelo não linear da planta e resultados de simulação
 dados/        registros dos ensaios de bancada apresentados no Capítulo 6
 analise/      scripts que geram as figuras e as métricas dos ensaios
 ```
+
+### configuracao/
+
+| Arquivo | Conteúdo |
+|---|---|
+| `configura_planta_simulacao2.m` | Parâmetros do rotor, dos atuadores e dos controladores. É executado antes tanto da simulação quanto dos modelos embarcados. A variável `Type` escolhe o controlador (1: PID, 2: SMC) e `PID_Type`, o método de discretização do PID (1: *backward Euler*, 2: Tustin) |
+| `sinais_sem_filtrokalman_ruidoso.mat` | Sinais de ruído medidos, carregados pelo script e usados como entrada nas simulações |
+
+Execute o script a partir da própria pasta `configuracao/` e depois abra o modelo desejado.
 
 ### firmware/
 
@@ -24,7 +34,6 @@ analise/      scripts que geram as figuras e as métricas dos ensaios
 | `nucleo_stm32g474_pid_v3_19_05.slx` | Modelo embarcado com o controlador PID (ensaio de 01/08) |
 | `nucleo_stm32g474_smc_v4_01_08.slx` | Modelo embarcado com o controlador SMC (ensaio de 06/08) |
 | `smc_mancal.m` | Função MATLAB do SMC usada nos ensaios (Apêndice da monografia) |
-| `parametros_temporeal_nucleostm32g4.m` | Script de parâmetros para os modelos embarcados |
 | `stm32g4_testeextmode_18_01.ioc` | Configuração do STM32CubeMX: relógios, ADCs com *oversampling*, OPAMPs, temporizadores, DMA e LPUART |
 
 Principais características da implementação:
@@ -37,10 +46,8 @@ Principais características da implementação:
 
 | Arquivo | Conteúdo |
 |---|---|
-| `configura_planta_simulacao2.m` | Parâmetros do rotor, dos atuadores e dos controladores; executar antes da simulação |
-| `smc_AMB_digital_v2.slx` | Modelo não linear do rotor-mancal com os controladores PID e SMC discretos |
+| `smc_AMB_digital_v2.slx` | Modelo não linear do rotor-mancal. Apesar do nome, implementa os dois controladores discretos, PID e SMC; a escolha é feita pela variável `Type` do script de configuração |
 | `smc_mancal_simulacao.m` | Função do SMC com os parâmetros usados nas simulações |
-| `sinais_sem_filtrokalman_ruidoso.mat` | Sinais de ruído medidos, usados como entrada nas simulações |
 | `simu_pid{1,2,3}_30_07.mat`, `simu_smc{1,2,3}_30_07.mat` | Resultados das simulações: degrau, degrau com ruído e força externa de −10 N |
 | `plot_simu.m` | Gera as figuras de simulação do Capítulo 4 |
 | `rootlocusAMB.m`, `pid_tuner_discrete.m` | Lugar das raízes e sintonia do PID |
@@ -60,7 +67,7 @@ Os sinais foram registrados por *external mode*. Como muitos sinais foram monito
 
 | Arquivo | Conteúdo |
 |---|---|
-| `figuras_pid_01_08.m` | Figuras do ensaio com PID (Capítulo 6) |
+| `plot_testes2.m` | Figuras do ensaio com PID (Capítulo 6) |
 | `figuras_smc_06_08.m` | Figuras do ensaio com SMC, incluindo a função de deslizamento s(t) |
 | `metricas_ensaios.m` | Métricas citadas no Capítulo 6: desvio em regime, correntes, órbitas, impulsos e função de deslizamento |
 
