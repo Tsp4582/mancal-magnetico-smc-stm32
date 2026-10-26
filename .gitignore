@@ -7,3 +7,4 @@ slprj/
 *.bin
 *.elf
 *.hex
+analise/figs_smc*/
