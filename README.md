@@ -78,7 +78,7 @@ Execute os scripts a partir da própria pasta `analise/`, já que os caminhos do
 
 ## Observação sobre os ensaios com SMC
 
-No ensaio de 06/08, a camada limite foi Φ = 0,01 m/s. Como ε/Φ = 200 s⁻¹ supera o ganho de aproximação total κ_ef = 111,5 s⁻¹, a função `smc_mancal.m` limita κ a zero. Com isso, o controlador operou fora da camada limite na maior parte do ensaio e não chegou ao modo deslizante.
+No ensaio de 06/08, a função de deslizamento permaneceu dentro da camada limite durante todo o ensaio, e o controlador operou como a realimentação linear equivalente ao PID (K_P ≈ 1600, K_D ≈ 15,5, K_I ≈ 300). O afastamento de s em relação a zero em regime corresponde à ação integral que sustenta a carga estática.
 
 ## Licença
 
