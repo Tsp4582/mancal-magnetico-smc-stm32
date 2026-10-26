@@ -66,6 +66,7 @@ Os sinais foram registrados por *external mode*. Como muitos sinais foram monito
 | `plot_testes2.m` | Figuras do ensaio com PID |
 | `figuras_smc_06_08.m` | Figuras do ensaio com SMC, incluindo a função de deslizamento s(t) |
 | `metricas_ensaios.m` | Métricas dos ensaios: desvio em regime, correntes, órbitas, impulsos e função de deslizamento |
+| `metricas_tabela_comparacao.m` | Métricas da tabela de comparação PID × SMC no Mancal A: partida, desvio padrão e corrente média sem rotação, amplitudes e corrente em rotação |
 | `comparacao_lei_linear_smc.m` | Compara a corrente de controle registrada no ensaio com SMC com a corrente prevista pela parcela linear da lei de controle (κ_ef = 111,5 s⁻¹), em um trecho de rotação do Mancal A, eixo Y |
 
 Execute os scripts a partir da própria pasta `analise/`, já que os caminhos dos dados são relativos.
