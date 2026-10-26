@@ -1,4 +1,4 @@
-# Implementação Embarcada de Controle por Modos Deslizantes em Mancal Magnético Ativo com Microcontrolador STM32
+# Implementação Embarcada de Controle em Mancal Magnético Ativo com Microcontrolador STM32
 
 - **Autora:** Thatyanne Silva do Prado
 
